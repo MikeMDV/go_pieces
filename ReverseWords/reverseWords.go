@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-// remDupWords will reverse the order of words in a string. The function
+// revWords will reverse the order of words in a string. The function
 // assumes the words are separated by a single space, but the ability
 // to designate a character for separation may be added later.
 func revWords(s string) string {
