@@ -5,10 +5,10 @@ import (
 	"strings"
 )
 
-// remDupWords will remove duplicate words in a string. The function will
-// not preserve the order of the words in the original string. The function
-// assumes the words are separated by a single space, but the ability
-// to designate a character for separation may be added later.
+// remDupWords will remove duplicate words in a string. The function is not
+// guaranteed to preserve the order of the words in the original string.
+// The function assumes the words are separated by a single space, but the
+// ability to designate a character for separation may be added later.
 func remDupWords(s string) []string {
 	var uniqueWords []string
 
