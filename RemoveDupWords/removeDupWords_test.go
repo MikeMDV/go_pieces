@@ -85,11 +85,16 @@ func TestRemDupWords(t *testing.T) {
 		/*fmt.Println("Test name:", testCase.name)
 		fmt.Println("strs received:", strs)*/
 
+		var isMatch bool = true
 		for i, str := range strs {
 			if str != testCase.expectedStrs[i] {
-				t.Fatalf("Test, '%v', failed. Expected %v for a string and received %v.",
-					testCase.name, testCase.expectedStrs[i], str)
+				isMatch = false
 			}
+		}
+
+		if !isMatch {
+			t.Fatalf("Test, '%v', failed. Expected %v for strings and received %v.",
+				testCase.name, testCase.expectedStrs, strs)
 		}
 	}
 }
