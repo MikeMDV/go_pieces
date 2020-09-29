@@ -1,8 +1,24 @@
 package main
 
 import (
+	"os"
 	"testing"
 )
+
+func TestMain(m *testing.M) {
+	setUp()
+	retCode := m.Run()
+	tearDown()
+	os.Exit(retCode)
+}
+
+func setUp() {
+	// Empty for these tests
+}
+
+func tearDown() {
+	// Empty for these tests
+}
 
 func TestFib(t *testing.T) {
 	type testCase struct {
