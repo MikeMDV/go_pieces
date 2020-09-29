@@ -4,10 +4,18 @@ import (
 	"fmt"
 )
 
-// fib will return the nth fibonacci number
-func fib(n int64) int64 {
+// Fib will return the nth fibonacci number
+// The function will run in O(n) time since it uses
+// a dynamic programming bottom up approach and memoization
+// of the previous 2 numbers in the series
+func Fib(n int64) (int64, error) {
+	var err error
+	if n < 0 {
+		err = fmt.Errorf("Error: n is less than 0")
+		return 0, err
+	}
 	if n == 0 {
-		return 0
+		return 0, err
 	}
 	var a int64 = 0
 	var b int64 = 1
@@ -18,7 +26,7 @@ func fib(n int64) int64 {
 		b = c
 	}
 
-	return a + b
+	return a + b, err
 }
 
 func main() {
@@ -28,6 +36,7 @@ func main() {
 	fmt.Println("The first 76 numbers in the fibonacci sequence are:")
 	var i int64
 	for i = 0; i < 76; i++ {
-		fmt.Println(fib(i))
+		fib, _ := Fib(i)
+		fmt.Println(fib)
 	}
 }
