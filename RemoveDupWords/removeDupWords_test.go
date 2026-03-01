@@ -28,7 +28,7 @@ func TestRemDupWords(t *testing.T) {
 	}
 
 	var testCases = []testCase{
-		testCase{
+		{
 			name:     "Test adjacent duplicated words",
 			inputStr: "This This string string has has duplicate duplicate words words",
 			expectedStrs: []string{
@@ -39,7 +39,7 @@ func TestRemDupWords(t *testing.T) {
 				"words",
 			},
 		},
-		testCase{
+		{
 			name:     "Test duplicated words in random order",
 			inputStr: "This string string words This duplicate words has duplicate has",
 			expectedStrs: []string{
@@ -50,7 +50,7 @@ func TestRemDupWords(t *testing.T) {
 				"has",
 			},
 		},
-		testCase{
+		{
 			name:     "Test no duplicated words",
 			inputStr: "This string has no duplicate words",
 			expectedStrs: []string{
@@ -62,14 +62,14 @@ func TestRemDupWords(t *testing.T) {
 				"words",
 			},
 		},
-		testCase{
+		{
 			name:     "Test string with one word",
 			inputStr: "This",
 			expectedStrs: []string{
 				"This",
 			},
 		},
-		testCase{
+		{
 			name:     "Test empty string",
 			inputStr: "",
 			expectedStrs: []string{
