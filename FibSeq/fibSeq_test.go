@@ -28,37 +28,37 @@ func TestFib(t *testing.T) {
 	}
 
 	var testCases = []testCase{
-		testCase{
+		{
 			name:        "Test 0th fib number",
 			n:           0,
 			expectedFib: 0,
 		},
-		testCase{
+		{
 			name:        "Test 1st fib number",
 			n:           1,
 			expectedFib: 1,
 		},
-		testCase{
+		{
 			name:        "Test 2nd fib number",
 			n:           2,
 			expectedFib: 1,
 		},
-		testCase{
+		{
 			name:        "Test 3rd fib number",
 			n:           3,
 			expectedFib: 2,
 		},
-		testCase{
+		{
 			name:        "Test 4th fib number",
 			n:           4,
 			expectedFib: 3,
 		},
-		testCase{
+		{
 			name:        "Test 75th fib number",
 			n:           75,
 			expectedFib: 2111485077978050,
 		},
-		testCase{
+		{
 			name:        "Test negative number for n",
 			n:           -1,
 			expectedFib: 0,
