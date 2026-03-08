@@ -20,13 +20,13 @@ func Fib(n int64) (int64, error) {
 	var a int64 = 0
 	var b int64 = 1
 	var i int64
-	for i = 2; i < n; i++ {
+	for i = 1; i < n; i++ {
 		c := a + b
 		a = b
 		b = c
 	}
 
-	return a + b, err
+	return b, err
 }
 
 func main() {
@@ -34,9 +34,8 @@ func main() {
 	// fibonacci sequence, each on a separate line. The sequence
 	// starts with 0 rather than 1
 	fmt.Println("The first 76 numbers in the fibonacci sequence are:")
-	var i int64
-	for i = 0; i < 76; i++ {
-		fib, _ := Fib(i)
+	for i := range 76 {
+		fib, _ := Fib(int64(i))
 		fmt.Println(fib)
 	}
 }
